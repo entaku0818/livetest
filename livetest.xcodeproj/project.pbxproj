@@ -14,6 +14,7 @@
 		619440AD28FC501D00BF337E /* livetestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619440AC28FC501D00BF337E /* livetestTests.swift */; };
 		619440B728FC501E00BF337E /* livetestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619440B628FC501E00BF337E /* livetestUITests.swift */; };
 		619440B928FC501E00BF337E /* livetestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619440B828FC501E00BF337E /* livetestUITestsLaunchTests.swift */; };
+		619440C728FC52D000BF337E /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 619440C628FC52D000BF337E /* RtcBasic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619440C728FC52D000BF337E /* RtcBasic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = livetest;
+			packageProductDependencies = (
+				619440C628FC52D000BF337E /* RtcBasic */,
+			);
 			productName = livetest;
 			productReference = 6194409728FC501B00BF337E /* livetest.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 6194408E28FC501B00BF337E;
+			packageReferences = (
+				619440C528FC52D000BF337E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+			);
 			productRefGroup = 6194409828FC501B00BF337E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		619440C528FC52D000BF337E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		619440C628FC52D000BF337E /* RtcBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 619440C528FC52D000BF337E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6194408F28FC501B00BF337E /* Project object */;
 }
